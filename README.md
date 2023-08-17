@@ -7,9 +7,9 @@ Welcome to the swapSwrver repository! This backend API serves as the foundation 
 
 - [Introduction](#introduction)
 - [Endpoints](#endpoints)
-- [Usage](#usage)
 - [User Interface](#user-interface)
 - [License](#license)
+- [Contact](#contact)
 
  
 ## Introduction
