@@ -1,49 +1,49 @@
-﻿
-# Swap and NFT backend API
+# swapSwrver - Swap and NFT Backend API
 
-Functions:
-homeControlle with the path: ""
+Welcome to the swapSwrver repository! This backend API serves as the foundation for Swap and NFT-related operations, catering to a seamless and efficient user experience. The API provides endpoints to facilitate various functionalities, including fee retrieval, pair price calculation, record management, and more.
 
-Examle:
-https://qweq.ir/health => Returns {status:"success"}
+  
+## Table of Contents
 
-Endpoitn:
+- [Introduction](#introduction)
+- [Endpoints](#endpoints)
+- [Usage](#usage)
+- [User Interface](#user-interface)
+- [License](#license)
 
-### // Fee => Applied fee  
-"/fee" => Returns {
-    "status": "success",
-    "data": {
-        "isFeeTaken": false,
-        "feeRecipientAddress": false,
-        "feePercentage": "0.01"
-    }
-}
+ 
+## Introduction
 
+swapSwrver is a backend API developed to support cryptocurrency swapping and NFT-related tasks. It offers a range of endpoints that allow users to retrieve fees, calculate pair prices, manage records, and more. This API is designed to be utilized by various projects within the blockchain ecosystem.
 
+ 
+## Endpoints
 
-### // Get current market price for a pair
-"/pairPrice/Chain/payToke}/receiveToken/value/slippage" => Returns {
-    "status": "success",
-    "data": {
-        "chainId": 56,
-        "price": "0.99739153609438425",
-        "guaranteedPrice": "0.947521959289665",
-        "estimatedPriceImpact": "0.3357",
-        "to": "0xdef1c0ded9bec7f1a1670819833240f027b25eff",
-        "data": "0xc43c9ef6000000000000........."
-    }
-    .......
-}
+The API provides the following endpoints for different functionalities:
 
+- **GET /fee**: Retrieve the applied fee information.
+- **GET /pairPrice/{chain}/{payToken}/{receiveToken}/{value}/{slippage}**: Calculate the current market price for a specified pair.
+- **POST /record/{title}/{cat}**: Record information and get a new ID.
+- **GET /allrecord**: Get all records.
+- **DELETE /delRecord/{id}**: Delete a specific record.
 
-### // record info
-[HttpPost] => object data needed to be sent
-"/record/title/cat" => { status = "success", id = newId } or { status = "error", message = ex.Message }
+Please refer to the [API documentation](/api-documentation.md) for detailed information about each endpoint, including input parameters, expected responses, and usage examples.
 
+ 
+## User Interface
 
-### // get all records
-"/allrecord" => Returns { status = "success", data = records } or { status = "error", message = ex.Message }
+To utilize the Swap user interface, follow these steps:
 
-### // delete a record
-"delRecord/id" => Returns { status = "success", data = records } or { status = "error", message = ex.Message } or { status = "error", message="Record not found." }
+Access the official Swap website: https://matthewshelby.github.io/swap.
+Connect your Ethereum-compatible wallet to the platform.
+Select the paying and receiving currencies, set the desired amount, and follow the on-screen instructions.
+
+## License
+
+This project is not licensed and all its contents are under copyright. All rights are reserved.
+
+ 
+## Contact
+
+For technical queries: [matthewShelB@gmail.com](mailto:matthewShelB@gmail.com)
 
